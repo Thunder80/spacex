@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { RiArticleLine } from "react-icons/ri";
 import { AiFillYoutube } from "react-icons/ai";
 import { FaCheck, FaTimes, FaWikipediaW } from "react-icons/fa";
-import Button from "./Button";
 
-import "../css/height.css";
 import Label from "./Label";
 
 interface CardProps {
@@ -33,12 +31,10 @@ export default function Card({ rocket }: CardProps) {
 	const month = date.getMonth();
 	const year = date.getFullYear();
 
-	const [expand, setExpand] = useState(false);
 	return (
 		<div
 			className={
-				"p-4 m-4 w-full lg:w-5/12 flex justify-center rounded-md shadow-xl hover:shadow-2xl transition duration-300 height-transition overflow-hidden " +
-				(expand ? "big-card" : "")
+				"p-4 m-4 w-full lg:w-5/12 flex justify-center rounded-md shadow-xl hover:shadow-2xl transition duration-300 height-transition overflow-hidden"
 			}
 		>
 			<div className="w-full block md:flex">
